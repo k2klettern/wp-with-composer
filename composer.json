@@ -1,0 +1,49 @@
+{
+    "name"        : "zeidan/wp-with-composer",
+    "description" : "Test project for WordPress stack via Composer",
+    "authors"     : [
+        {
+            "name"    : "Eric Zeidan",
+            "homepage": "https://zeidan.info/"
+        }
+    ],
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url" : "git@github.com:k2klettern/ez-simple-tweet.git"
+        }
+    ],
+    "config"      : {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "require"     : {
+        "johnpbloch/wordpress"            : "*"
+    },
+    "require-dev" : {
+        "wpackagist-plugin/a-fresher-cache"           : "*",
+        "wpackagist-plugin/core-control"              : "*",
+        "wpackagist-plugin/monster-widget"            : "*",
+        "wpackagist-plugin/theme-check"               : "*",
+        "wpackagist-plugin/user-switching"            : "*",
+        "wpackagist-plugin/wcm-user-language-switcher": "*",
+        "k2klettern/ez-simple-tweet" : "*",
+        "wpackagist-theme/wp-bootstrap-starter":"3.3.2"
+    },
+    "extra"       : {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+          "wp-content/plugins/{$name}/": [
+            "type:wordpress-plugin"
+          ],
+          "wp-content/themes/{$name}/": [
+            "type:wordpress-theme"
+          ]
+          }
+    },
+    "minimum-stability": "dev"
+}
