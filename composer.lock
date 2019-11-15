@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59ecae6e2e5e0c4467c3826280140d7f",
+    "content-hash": "95e70b2d7c24cc632464186079ce6525",
     "packages": [
         {
             "name": "johnpbloch/wordpress",
@@ -133,6 +133,171 @@
                 "wordpress"
             ],
             "time": "2018-11-09T20:10:38+00:00"
+        },
+        {
+            "name": "phpoption/phpoption",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "2f6af23c6ff2bcd32ebd969e118e5a3b57d649dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/2f6af23c6ff2bcd32ebd969e118e5a3b57d649dc",
+                "reference": "2f6af23c6ff2bcd32ebd969e118e5a3b57d649dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpOption\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Option Type for PHP",
+            "keywords": [
+                "language",
+                "option",
+                "php",
+                "type"
+            ],
+            "time": "2019-11-10T15:06:50+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
+                "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-08-06T08:03:45+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "e9b60fd90d7cf5037d34f62e6ffc6e07e89eb2dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/e9b60fd90d7cf5037d34f62e6ffc6e07e89eb2dc",
+                "reference": "e9b60fd90d7cf5037d34f62e6ffc6e07e89eb2dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0",
+                "phpoption/phpoption": "^1.5",
+                "symfony/polyfill-ctype": "^1.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com",
+                    "homepage": "https://gjcampbell.co.uk/"
+                },
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "https://vancelucas.com/"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2019-11-04T22:18:38+00:00"
         }
     ],
     "packages-dev": [
@@ -208,30 +373,6 @@
                 "zend"
             ],
             "time": "2013-08-20T04:37:09+00:00"
-        },
-        {
-            "name": "k2klettern/ez-simple-tweet",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/k2klettern/ez-simple-tweet.git",
-                "reference": "c3b4c18894cfc78efd142a28fe9117cbc2d5d4d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/k2klettern/ez-simple-tweet/zipball/c3b4c18894cfc78efd142a28fe9117cbc2d5d4d5",
-                "reference": "c3b4c18894cfc78efd142a28fe9117cbc2d5d4d5",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "v1.0.6"
-            },
-            "type": "wordpress-plugin",
-            "support": {
-                "source": "https://github.com/k2klettern/ez-simple-tweet/tree/master",
-                "issues": "https://github.com/k2klettern/ez-simple-tweet/issues"
-            },
-            "time": "2019-11-12T14:43:50+00:00"
         },
         {
             "name": "wpackagist-plugin/a-fresher-cache",
@@ -363,11 +504,49 @@
             },
             "type": "wordpress-theme",
             "homepage": "https://wordpress.org/themes/wp-bootstrap-starter/"
+        },
+        {
+            "name": "zeidan/daily-nasa-photo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/k2klettern/daily-nasa-photo.git",
+                "reference": "62d5deec4a52ac5c98d406a47b30edde9cd07f02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/k2klettern/daily-nasa-photo/zipball/62d5deec4a52ac5c98d406a47b30edde9cd07f02",
+                "reference": "62d5deec4a52ac5c98d406a47b30edde9cd07f02",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "v1.0.6"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Zeidan\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Eric Zeidan",
+                    "email": "k2klettern@gmail.com"
+                }
+            ],
+            "description": "Add a daily Nasa Photo in your Project",
+            "support": {
+                "source": "https://github.com/k2klettern/daily-nasa-photo/tree/master",
+                "issues": "https://github.com/k2klettern/daily-nasa-photo/issues"
+            },
+            "time": "2019-11-15T09:13:19+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "vlucas/phpdotenv": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

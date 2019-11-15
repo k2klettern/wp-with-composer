@@ -15,14 +15,15 @@
         },
         {
             "type": "vcs",
-            "url" : "git@github.com:k2klettern/ez-simple-tweet.git"
+            "url" : "git@github.com:k2klettern/daily-nasa-photo.git"
         }
     ],
     "config"      : {
         "vendor-dir": "wp-content/vendor"
     },
     "require"     : {
-        "johnpbloch/wordpress"            : "*"
+        "johnpbloch/wordpress"            : "*",
+        "vlucas/phpdotenv": "^4.0@dev"
     },
     "require-dev" : {
         "wpackagist-plugin/a-fresher-cache"           : "*",
@@ -31,7 +32,7 @@
         "wpackagist-plugin/theme-check"               : "*",
         "wpackagist-plugin/user-switching"            : "*",
         "wpackagist-plugin/wcm-user-language-switcher": "*",
-        "k2klettern/ez-simple-tweet" : "*",
+        "zeidan/daily-nasa-photo" : "*",
         "wpackagist-theme/wp-bootstrap-starter":"3.3.2"
     },
     "extra"       : {

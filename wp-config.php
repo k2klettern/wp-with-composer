@@ -17,25 +17,27 @@
  *
  * @package WordPress
  */
-require __DIR__ . '/wp-content/vendor/autoload.php';
+require_once __DIR__ . '/wp-content/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
 
-define('WP_SITEURL', 'http://wpwc.loc');
+define('WP_SITEURL', 'http://wpwc.loc/wp');
 define('WP_HOME',    'http://wpwc.loc');
 define('WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content');
 define('WP_CONTENT_URL', 'http://wpwc.loc/wp-content');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpressdb' );
+define( 'DB_NAME', getenv('DB_NAME') );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', getenv('DB_USER') );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', getenv('DB_PASSWORD') );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', getenv('DB_HOST') );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -69,7 +71,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = getenv('DB_PREFIX');
 
 /**
  * For developers: WordPress debugging mode.
@@ -83,7 +85,7 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 
 /* That's all, stop editing! Happy publishing. */
