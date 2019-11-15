@@ -13,30 +13,17 @@ Added wpcakagist repository for all Plugins and Themes from Wordpress
 (I just added a lot of plugins and one theme to test)
 
 Added a test with an own Plugin repository
-(I added a plugin until development from my own repository k2klettern/ez-simple-tweet)
+(I added a plugin until development from my own repository k2klettern/nasa-daily-photo)
 
 TO INSTALL
 
 clone this repo
 and then run composer install
 
-The following changes have to be done
-
-in .htaccess change wpwc.loc for your local url
-
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www.)?wpwc.loc$
-RewriteCond %{REQUEST_URI} !^/wp/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /wp/$1
-RewriteCond %{HTTP_HOST} ^(www.)?wpwc.loc$
-RewriteRule ^(/)?$ wp/index.php [L] 
-</IfModule>
-
 in wp-config.php
 
-change also all wpwc.loc with your url and write your database settings
+change also all wpwc.loc with your url and write your database settings in the .env file
+
+wp-admin will be available thru yoururl/wp/wp-admin adding an extra security
 
 That´s all, visit your local url and you are done

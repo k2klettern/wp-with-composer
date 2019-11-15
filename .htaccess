@@ -1,14 +1,3 @@
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www.)?wpwc.loc$
-RewriteCond %{REQUEST_URI} !^/wp/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /wp/$1
-RewriteCond %{HTTP_HOST} ^(www.)?wpwc.loc$
-RewriteRule ^(/)?$ wp/index.php [L]
-</IfModule>
-
 # BEGIN WordPress
 # Die Anweisungen (Zeilen) zwischen `BEGIN WordPress` und `END WordPress` sind
 # dynamisch generiert und sollten nur über WordPress-Filter geändert werden.

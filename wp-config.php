@@ -21,10 +21,10 @@ require_once __DIR__ . '/wp-content/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
-define('WP_SITEURL', 'http://wpwc.loc/wp');
-define('WP_HOME',    'http://wpwc.loc');
+define('WP_SITEURL', getenv('WP_URL') . '/wp');
+define('WP_HOME',    getenv('WP_URL'));
 define('WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content');
-define('WP_CONTENT_URL', 'http://wpwc.loc/wp-content');
+define('WP_CONTENT_URL', getenv('WP_URL') . '/wp-content');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -85,7 +85,7 @@ $table_prefix = getenv('DB_PREFIX');
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', getenv( 'WP_DEBUG' ) );
 
 
 /* That's all, stop editing! Happy publishing. */
