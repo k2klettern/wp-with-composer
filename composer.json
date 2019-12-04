@@ -23,17 +23,11 @@
     },
     "require"     : {
         "johnpbloch/wordpress"            : "*",
-        "vlucas/phpdotenv": "^4.0@dev"
+        "vlucas/phpdotenv": "^4.0@dev",
+        "zeidan/daily-nasa-photo" : "dev-master",
+        "wpackagist-theme/wp-bootstrap-starter":"3.3.2"
     },
     "require-dev" : {
-        "wpackagist-plugin/a-fresher-cache"           : "*",
-        "wpackagist-plugin/core-control"              : "*",
-        "wpackagist-plugin/monster-widget"            : "*",
-        "wpackagist-plugin/theme-check"               : "*",
-        "wpackagist-plugin/user-switching"            : "*",
-        "wpackagist-plugin/wcm-user-language-switcher": "*",
-        "zeidan/daily-nasa-photo" : "*",
-        "wpackagist-theme/wp-bootstrap-starter":"3.3.2"
     },
     "extra"       : {
         "wordpress-install-dir": "wp",
@@ -46,5 +40,5 @@
           ]
           }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }

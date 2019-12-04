@@ -85,8 +85,16 @@ $table_prefix = getenv('DB_PREFIX');
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', getenv( 'WP_DEBUG' ) );
+define( 'WP_DEBUG', getenv( 'WP_DEBUG' ) === true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
 
+define( 'AUTOMATIC_UPDATER_DISABLED', false );
+
+if ( !WP_DEBUG_LOG ) {
+	ini_set( 'log_errors', 1 );
+	ini_set( 'error_log', WP_CONTENT_DIR . '/debug.log' );
+}
 
 /* That's all, stop editing! Happy publishing. */
 
