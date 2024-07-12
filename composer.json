@@ -16,29 +16,32 @@
         {
             "type": "vcs",
             "url" : "git@github.com:k2klettern/daily-nasa-photo.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:k2klettern/cpt-to-help-plugin.git"
         }
     ],
     "config"      : {
-        "vendor-dir": "wp-content/vendor"
+        "vendor-dir": "wp-content/vendor",
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
+        }
     },
     "require"     : {
-        "johnpbloch/wordpress"            : "*",
-        "vlucas/phpdotenv": "^4.0@dev",
+        "johnpbloch/wordpress": "^6",
+        "vlucas/phpdotenv": "^3",
         "zeidan/daily-nasa-photo" : "dev-master",
-        "wpackagist-theme/wp-bootstrap-starter":"3.3.2"
+        "zeidan/cpt-to-help-plugin" : "dev-master",
+        "wpackagist-theme/wp-bootstrap-starter":"^3",
+        "wpackagist-plugin/woocommerce-services": "^2.0",
+        "wpackagist-plugin/dhlpwc":"^2"
     },
     "require-dev" : {
     },
     "extra"       : {
-        "wordpress-install-dir": "wp",
-        "installer-paths": {
-          "wp-content/plugins/{$name}/": [
-            "type:wordpress-plugin"
-          ],
-          "wp-content/themes/{$name}/": [
-            "type:wordpress-theme"
-          ]
-          }
+        "wordpress-install-dir": "wp"
     },
     "minimum-stability": "stable"
 }

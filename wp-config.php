@@ -17,9 +17,16 @@
  *
  * @package WordPress
  */
+
 require_once __DIR__ . '/wp-content/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::create(__DIR__);
-$dotenv->load();
+
+use Dotenv\Dotenv;
+
+/**
+ * load ENV variables
+ */
+$loadDot = Dotenv::create(__DIR__);
+$loadDot->load();
 
 define('WP_SITEURL', getenv('WP_URL') . '/wp');
 define('WP_HOME',    getenv('WP_URL'));
@@ -85,13 +92,13 @@ $table_prefix = getenv('DB_PREFIX');
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', getenv( 'WP_DEBUG' ) === true );
-define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
 define( 'WP_DEBUG_LOG', true );
 
 define( 'AUTOMATIC_UPDATER_DISABLED', false );
 
-if ( !WP_DEBUG_LOG ) {
+if ( !defined('WP_DEBUG_LOG') ) {
 	ini_set( 'log_errors', 1 );
 	ini_set( 'error_log', WP_CONTENT_DIR . '/debug.log' );
 }

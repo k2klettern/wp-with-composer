@@ -1,14 +1,15 @@
+
 # BEGIN WordPress
-# Die Anweisungen (Zeilen) zwischen `BEGIN WordPress` und `END WordPress` sind
-# dynamisch generiert und sollten nur über WordPress-Filter geändert werden.
-# Alle Änderungen an den Anweisungen zwischen diesen Markierungen werden überschrieben.
+# Las directivas (líneas) entre `BEGIN WordPress` y `END WordPress` se generan dinámicamente
+# , y solo se deberían modificar mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores se sobreescribirán.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /wp-with-composer/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /wp-with-composer/index.php [L]
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
